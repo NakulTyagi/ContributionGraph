@@ -10,7 +10,7 @@ Usage -
 
 
 
-`heatmapvalues = [
+heatmapvalues = [
    
    {date: "2022-05-18", count: 1},
 
@@ -24,4 +24,4 @@ Usage -
 
    {date: "2023-03-06", count: 1},
    
-]`
+]
