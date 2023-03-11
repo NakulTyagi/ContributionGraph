@@ -4,6 +4,10 @@
 # Contribution Graph
 ReactNative Contribution Graph
 
+Prerequisite - Install dayjs
+
+`npm install dayjs` or `yarn add dayjs`
+
 Usage - 
 
 `<ContributionGraph heatmapvalues={heatmapValues} />`
