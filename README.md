@@ -6,13 +6,22 @@ ReactNative Contribution Graph
 
 Usage - 
 
-<ContributionGraph heatmapvalues={_heatmapValues} />
+`<ContributionGraph heatmapvalues={heatmapValues} />`
 
-heatmapvalues = [
+
+
+`heatmapvalues = [
+   
    {date: "2022-05-18", count: 1},
+
    {date: "2022-05-24", count: 3},
+
    {date: "2022-06-13", count: 1},
+
    {date: "2022-06-16", count: 1},
+
    {date: "2022-10-31", count: 2},
+
    {date: "2023-03-06", count: 1},
-]
+   
+]`
