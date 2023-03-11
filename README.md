@@ -1,7 +1,7 @@
 <img width="412" alt="Screenshot 2023-03-11 at 1 14 05 PM" src="https://user-images.githubusercontent.com/31548192/224472136-2e2619e3-0938-4dfa-9f1c-d7d5ee7d804c.png">
 
 
-# ContributionGraph
+# Contribution Graph
 ReactNative Contribution Graph
 
 Usage - 
