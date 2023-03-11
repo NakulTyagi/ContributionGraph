@@ -3,11 +3,10 @@ import {
   Pressable,
   ScrollView,
   StyleSheet,
+  Text,
   View,
 } from 'react-native';
 import React, { useEffect, useRef, useState } from 'react';
-import { COLORS, SIZES } from '@constants/core/theme';
-import AppText from '@components/AppText';
 import dayjs from 'dayjs';
 
 type ContributionGraphProps = {
@@ -46,7 +45,6 @@ const ContributionGraph = ({ heatmapvalues }: ContributionGraphProps) => {
     'Dec',
   ];
   useEffect(() => {
-    console.log(heatmapvalues);
     const dates: any = [];
     const counts: any = [];
     heatmapvalues?.map((value: any) => {
@@ -122,10 +120,10 @@ const ContributionGraph = ({ heatmapvalues }: ContributionGraphProps) => {
   };
 
   const colorArray = [
-    COLORS.positive200,
-    COLORS.positive500,
-    COLORS.positive900,
-    COLORS.positive900,
+    '#CBE5CC',
+    '#65B168',
+    '#1F4921',
+    '#1F4921',
   ];
 
   const computeMonths = (monthList: any) => {
@@ -159,7 +157,7 @@ const ContributionGraph = ({ heatmapvalues }: ContributionGraphProps) => {
         return colorArray[3];
       }
     }
-    return COLORS.grey50;
+    return '#F0F0F1';
   };
 
   const checkFirstDay = (day: any) => {
@@ -198,7 +196,7 @@ const ContributionGraph = ({ heatmapvalues }: ContributionGraphProps) => {
                             flexDirection: 'column',
                             flexWrap: 'wrap',
                             height: 90,
-                            marginRight: SIZES.base - 2,
+                            marginRight: 8 - 2,
                           }}
                         >
                           {checkFirstDay(month[0]).map((day: any) => {
@@ -206,10 +204,10 @@ const ContributionGraph = ({ heatmapvalues }: ContributionGraphProps) => {
                               <Pressable
                                 key={day}
                                 style={{
-                                  height: SIZES.base,
-                                  width: SIZES.base,
-                                  backgroundColor: COLORS.white,
-                                  borderRadius: SIZES.base / 4,
+                                  height: 8,
+                                  width: 8,
+                                  backgroundColor: '#ffffff',
+                                  borderRadius: 8 / 4,
                                   margin: 2,
                                 }}
                               />
@@ -221,10 +219,10 @@ const ContributionGraph = ({ heatmapvalues }: ContributionGraphProps) => {
                               <Pressable
                                 key={day}
                                 style={{
-                                  height: SIZES.base,
-                                  width: SIZES.base,
+                                  height: 8,
+                                  width: 8,
                                   backgroundColor: checkSquareColor(day),
-                                  borderRadius: SIZES.base / 4,
+                                  borderRadius: 8 / 4,
                                   margin: 2,
                                 }}
                                 // onPress={() => console.log(day.get('month'), day)}
@@ -232,13 +230,11 @@ const ContributionGraph = ({ heatmapvalues }: ContributionGraphProps) => {
                             );
                           })}
                         </View>
-                        <AppText
-                          size="caption_2"
-                          style={{ marginLeft: SIZES.medium }}
-                          color={COLORS.grey400}
+                        <Text
+                          style={{ marginLeft: 16, color: '#9696A0' }}
                         >
                           {MONTH_LABELS[monthIndex]}
-                        </AppText>
+                        </Text>
                       </View>
                     );
                   })}
@@ -253,24 +249,24 @@ const ContributionGraph = ({ heatmapvalues }: ContributionGraphProps) => {
           width: '100%',
           flexDirection: 'row',
           justifyContent: 'center',
-          marginTop: SIZES.small,
+          marginTop: 12,
         }}
       >
         <View
           style={{
             flexDirection: 'row',
             alignItems: 'center',
-            marginBottom: SIZES.base * 3,
+            marginBottom: 24,
           }}
         >
           {[1, 2].map((item) => (
             <Pressable
               key={item}
               style={{
-                width: SIZES.small * 3,
+                width: 36,
                 backgroundColor:
-                  selectedIndex === item ? COLORS.grey900 : COLORS.grey200,
-                height: selectedIndex === item ? SIZES.base - 2 : 2,
+                  selectedIndex === item ? '#292A31' : '#D2D2D6',
+                height: selectedIndex === item ? 6 : 2,
                 borderRadius: 10,
               }}
               onPress={() => {
